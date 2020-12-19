@@ -55,7 +55,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _indiceAtual = 0;
-  List<Aparelho> aparelhos = [];
+  List<Aparelho> aparelhos = AparelhoDao.listar();
   List<AparelhoConsumo> aparelhosConsumo = AparelhoConsumoDao.listar();
 
   List<Widget> getChildren(){
@@ -68,11 +68,11 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-   AparelhoDao.listarAparelhos().then((value) => {
+   /*AparelhoDao.listarAparelhos().then((value) => {
       setState(()=>{
         aparelhos = value
       })
-    });
+    }); */
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
     //

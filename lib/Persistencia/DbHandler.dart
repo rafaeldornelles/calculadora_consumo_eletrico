@@ -18,7 +18,6 @@ class DbHandler{
          join(await getDatabasesPath(), 'watt_calculator.db')
        );
        criarTabelas();
-       seedDatabase();
      }
 
      criarTabelas();

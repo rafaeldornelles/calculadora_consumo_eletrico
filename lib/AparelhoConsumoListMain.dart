@@ -22,7 +22,7 @@ class _AparelhoConsumoListMainState extends State<AparelhoConsumoListMain> {
   _AparelhoConsumoListMainState(this.aparelhosconsumo);
 
   String getConsumoMensal(){
-    double valor = aparelhosconsumo.fold(0, (previousValue, element) => (previousValue + (element.consumoMensal)));
+    double valor = aparelhosconsumo.fold(0, (previousValue, element) => (previousValue + element.consumoMensal)) * valorKwh;
     return valor.toStringAsFixed(2);
   }
   @override
